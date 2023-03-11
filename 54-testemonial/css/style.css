@@ -1,0 +1,158 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+section
+{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(180, 186, 187);
+}
+.container
+{
+    margin-top: 30vh;
+    position: relative;
+    width: 50%;
+    height: auto;
+    height: 40vh;
+  
+  
+}
+.items
+{
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+    padding-bottom: 60px;
+    clip-path:circle(0% at 0 50%) ;
+}
+.items h2
+{
+    margin-top: 10px;
+    color: darkgoldenrod;
+}
+.items p 
+{
+   
+    margin-top: 20px;
+    width: 70%;
+    text-align: center;
+    color: rgb(46, 45, 45);
+}
+.items.active 
+{
+    clip-path:circle(150% at 0 50%) ;
+    transition: 1s;
+    transition-property: clip-path;
+}
+.navigations
+{
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    bottom: 32vh;
+    transform: rotateX(-50%);
+}
+.btn 
+{
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: 2px solid rgb(134, 133, 134);
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+    margin-top: 40px;
+}
+.btn.active
+{
+    background-color: rgb(134, 133, 134);;
+}
+
+
+@media only screen and (max-width:1400px)
+{
+    .navigations
+    {
+        bottom: 29vh;
+    }
+}
+@media only screen and (max-width:1250px)
+{
+    .container
+    {
+        width: 60%;
+    }
+   
+}
+@media only screen and (max-width:1025px)
+{
+    .container
+    {
+        width: 70%;
+    }
+    .items p 
+    {
+        width: 80%;
+    }
+    
+}
+@media only screen and (max-width:780px)
+{
+    .container
+    {
+        width: 80%;
+    }
+    .items p 
+    {
+        width: 90%;
+    }
+
+}
+@media only screen and (max-width:610px)
+{
+    .container
+    {
+        width: 100%;
+
+    }
+    .items p 
+    {
+        width: 100%;
+        font-size: 14px;
+    }
+    .navigations
+    {
+        bottom: 30vh;
+    }
+
+}
+@media only screen and (max-width:400px)
+{
+    .navigations
+    {
+        bottom: 29vh;
+    }
+    .btn
+    {
+        width: 15px;
+        height: 15px;
+        margin: 10px;
+    }
+    
+}
+
+
